@@ -1,13 +1,10 @@
+from math import sqrt
 def is_prime(n):
-    if (n<2):
-        return False
-    else:
-        for i in range(n//2):
-            if (n%i == 0):
-                return False
-            else:
-                return True
-
+    for i in range(2, (int(sqrt(n))+1)):
+        if not n % i:
+            return False
+    return True
+                       
 
 def is_diabolic(n):
     x = str(n)
