@@ -8,16 +8,18 @@ def is_prime(n):
 
 def is_diabolic(n):
     x = str(n)
-    if ('666' in x):
+    if '666' in x:
         return True
+    else:
+        return False
 
 
 def all_of_them():
-    numer = 0
+    number = 0
     for i in range(1, 10000):
-        if (is_prime(i) and is_diabolic(i)):
+        if is_prime(i) and is_diabolic(i):
             print(i)
             number += 1
-    print("ilosc: " + numer)
+    print("ilosc: ", number)
     
 all_of_them()
