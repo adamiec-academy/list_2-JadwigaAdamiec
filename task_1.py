@@ -1,11 +1,11 @@
 def remove_parentheses(text):
     result = ""
     is_inside = False
-    for letter in text:
-        if(letter == '('):
+    for i in range (len(text)-1:
+        if text[i] == '(':
             is_inside = True
             result += ''
-        elif(letter == ')'):
+        elif text[i] == ')' and text[i+1] == " ":
             is_inside = False
         elif not is_inside:
             result += letter
